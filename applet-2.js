@@ -22,7 +22,7 @@ class LeafletMap {
     myMap.addMarker(8.359639,124.869179, 'CCS Laboratory 1');
     myMap.addMarker(8.359554,124.869153, 'CCS Laboratory 2');
 
-
+    myMap.loadMarkersFromJson('applet-2.json');
 
 
 
