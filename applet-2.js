@@ -23,7 +23,7 @@ const marker = L.marker({lat, long}).addTo(this.map)
 }
 const Mymap = new leafletmap('map',[8.359735, 124.869206, 18]);
 
-
+Mymap.addMarker(8.359735, 124.869206, 'CCS Laboratory 2');
 
 
 
