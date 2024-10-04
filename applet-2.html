@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <title>>Applet 2 - Leaflet Map</title>
+    <style>
+        .applet-container{
+            margin-top: 1rem;
+            margin-left: 2rem;
+            width: 90%;
+        }
+
+        #map {
+            height: 600px;
+        }
+        
+    </style>
 </head>
 
 <nav class="navbar" style="background-color: #e3f2fd;">
@@ -48,8 +60,13 @@
   </nav>
 
 <body>
-    
+    <div class="applet-container">
+        <h3>Leaflet Map Basics</h3>
+        <div id="map"></div>
+      
+    </div>
+   
+    <script src="applet-2.js"></script>
 </body>
-<h1>programming</h1>
-<h3><a href="applet-1.html"> basic events</a>   </h3>
+
 </html>
