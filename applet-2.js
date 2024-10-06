@@ -85,7 +85,11 @@ class LeafletMap {
         this.logCount1Element.innerHTML = `BA Building Attendance: ${this.attendanceCountBA}`;
         this.logCount2Element.innerHTML = `CCS Laboratory Attendance: ${this.attendanceCountLab}`;
    }
-
+   dataSc() {
+    this.addMarker(8.360238, 124.867470, 'SC building');
+    this.attendanceCountSC++; 
+    this.updateLogDisplay();
+}
 
 }
 
