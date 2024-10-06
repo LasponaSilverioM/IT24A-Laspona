@@ -8,6 +8,7 @@ class LeafletMap {
         this.attendanceCountBA = 0;
         this.attendanceCountLab = 0;
 
+        this.markerCounts = {};
         this.loggedData = [];
 
         this.btn = document.getElementById('btn');
@@ -44,7 +45,12 @@ class LeafletMap {
                 });
             })
             .catch(error => console.error('Error loading markers:', error));
+
+
+            
     }
+    
+
 }
 
 const myMap = new LeafletMap('map', [8.360004, 124.868419], 18);
