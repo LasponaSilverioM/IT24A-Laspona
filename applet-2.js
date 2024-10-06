@@ -3,6 +3,11 @@ class LeafletMap {
         this.map = L.map(containerId).setView(center, zoom);
         this.initTileLayer();
 
+
+        this.attendanceCountSC = 0;
+        this.attendanceCountBA = 0;
+        this.attendanceCountLab = 0;
+
         this.btn = document.getElementById('btn');
         this.btn1 = document.getElementById('btn1');
         this.btn2 = document.getElementById('btn2');
