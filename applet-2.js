@@ -9,6 +9,7 @@ class LeafletMap {
         this.attendanceCountLab = 0;
 
         this.markerCounts = {};
+        this.markers = [];
         this.loggedData = [];
 
         this.btn = document.getElementById('btn');
