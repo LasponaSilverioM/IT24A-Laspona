@@ -63,9 +63,23 @@ class LeafletMap {
             })
             .catch(error => console.error('Error loading markers:', error));
 
-
-            
     }
+    clearLogs(){
+        this.attendanceCountSC = 0;
+        this.attendanceCountBA = 0;
+        this.attendanceCountLab = 0;
+
+        this.loggedData = [];
+        this.markerCounts = {}; 
+        this.markers.forEach(marker => {
+            const message = marker.getPopup().getContent().split('<br>')[0]; 
+            this.markerCounts[message] = 0;
+            this.updateMarkerPopup(marker, message); 
+        });
+
+        this.updateLogDisplay();
+    }
+
     
 
 }
