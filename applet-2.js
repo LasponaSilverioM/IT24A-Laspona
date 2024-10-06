@@ -80,7 +80,12 @@ class LeafletMap {
         this.updateLogDisplay();
     }
 
-    
+    displayLogCount() {      
+        this.logCountElement.innerHTML = `SC Building Attendance: ${this.attendanceCountSC}`;
+        this.logCount1Element.innerHTML = `BA Building Attendance: ${this.attendanceCountBA}`;
+        this.logCount2Element.innerHTML = `CCS Laboratory Attendance: ${this.attendanceCountLab}`;
+   }
+
 
 }
 
