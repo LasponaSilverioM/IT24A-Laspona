@@ -41,7 +41,11 @@ class LeafletMap {
             this.markerCounts[message]++;
             this.updateMarkerPopup(marker, message);
         });
+
+        this.markers.push(marker);
     }
+
+    
     loadMarkersFromJson(url) {
         fetch(url)
             .then(response => response.json())
