@@ -28,8 +28,8 @@ class LeafletMap {
 const myMap = new LeafletMap('map', [8.360004, 124.868419], 18);
     
 myMap.addMarker(8.360238, 124.867470, 'SC Building');
-myMap.addMarker(8.359639,124.869179, 'Laboratory 1');
-myMap.addMarker(8.359554,124.869153, 'Laboratory 2');
+
+myMap.addMarker(8.359554,124.869153, 'CCS Laboratories');
 myMap.addMarker(8.359134,124.868537, 'BA BUilding');
 
 myMap.loadMarkersFromJson('applet-2.json');
