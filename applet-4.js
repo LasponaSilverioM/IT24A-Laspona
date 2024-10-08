@@ -127,9 +127,12 @@ class LeafletMap {
 
 
     }
+    const Mymap = new LeafletMap('map', [8.359735, 124.869206], 18);
 
 
-
+    document.addEventListener('DOMContentLoaded', () => {
+        Mymap.displayLogCount();
+    });
 
 
 
