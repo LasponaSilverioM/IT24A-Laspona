@@ -8,13 +8,16 @@ class LeafletMap {
         this.attendanceCountBA = 0;
         this.attendanceCountLab1 = 0;
 
+        this.markerCounts = {};
+        this.markers = [];
+
+        this.loggedData = []; 
+
+
+
+
     }
     }
-
-
-
-
-
 
 
 
