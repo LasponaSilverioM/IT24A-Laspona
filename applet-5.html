@@ -6,8 +6,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <title>searh</title>
+    <style>
+        body{
+            background-color: rgb(29, 29, 29);
+        }
+        .input-search{
+            width: 40rem;
+            margin-top: 2rem;
+            margin-left: 1.5rem;
+        }
+    </style>
   
 </head>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -34,6 +45,12 @@
             </ul>
           </li>
 <body>
-    
+    <div class="input-group input-group-lg input-search">
+        <span class="input-group-text">Search</span>
+        <input type="text" id="studentSearchBar" class="form-control">
+    </div>
+      <div id="studentList"  style="margin-left: 3.5rem;"></div>
+      <div id="studentSearchList" style="margin-left: 3.5rem;"></div>
 </body>
+<script src="applet-5.js"></script>
 </html>
