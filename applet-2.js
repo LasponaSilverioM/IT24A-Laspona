@@ -1,37 +1,52 @@
-class LeafletMap {
-    constructor(containerId, center, zoom) {
-        this.map = L.map(containerId).setView(center, zoom);
-        this.initTileLayer();
+class DataLogger{
+
+    constructor(buttonId, cardContainerId, clearButtonId, logCountId){
+        this.logButton = document.getElementById(buttonId);
+        this.clearButton = document.getElementById(clearButtonId);
+        this.idContainer = document.getElementById(cardContainerId);
+        this.logCountElement = document.getElementById(logCountId);
+        this.loggedData = [];    
+        
+        this.logButton.addEventListener('click', () => this.logData());
+        this.clearButton.addEventListener('click', () => this.clearLogs());
     }
-    initTileLayer() {
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(this.map);
+    logData(){
+        const time = new Date().toLocaleString();
+        this.loggedData.push(time);
+        this.updateCardContainer();
     }
-    addMarker(lat, lng, message) {
-        const marker = L.marker([lat, lng]).addTo(this.map);
-        marker.bindPopup(message);
+
+    clearLogs(){
+        this.loggedData = []; 
+        this.updateCardContainer();
     }
-    loadMarkersFromJson(url) {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(marker => {
-                    this.addMarker(marker.latitude, marker.longitude, marker.message);
-                });
-            })
-            .catch(error => console.error('Error loading markers:', error));
+    updateCardContainer(){
+        this.idContainer.innerHTML = '';
+    
+        this.loggedData.forEach(data => {       
+            const card = document.createElement('div');
+            card.className = 'card mb-2';
+            card.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">Logged Data</h5>
+                    <p class="card-text">${data}</p>
+                </div>
+            `;
+            this.idContainer.appendChild(card);
+        });
+        
+        this.displayLogCount();
     }
+    countLogs(){
+        return this.loggedData.length;
+      }
+      displayLogCount() {
+        const logCount = this.countLogs();
+        this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`; 
+    }
+
 }
 
-const myMap = new LeafletMap('map', [8.360004, 124.868419], 18);
-    
-myMap.addMarker(8.360238, 124.867470, 'SC Building');
-
-myMap.addMarker(8.359554,124.869153, 'CCS Laboratories');
-myMap.addMarker(8.359134,124.868537, 'BA BUilding');
-
-myMap.loadMarkersFromJson('applet-2.json');
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    new DataLogger('logButton', 'idContainer', 'clearButton', 'logCount'); 
+    })

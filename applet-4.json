@@ -1,0 +1,19 @@
+[
+    {
+        "student_id": 1,
+        "student_name": "Silverio M. Laspona",
+        "student_program": "BS-Information Technology"
+    },
+
+    {
+        "student_id": 2,
+        "student_name": "Bobords",
+        "student_program": "BS-Crim"
+    },
+
+    {
+        "student_id": 3,
+        "student_name": "predro san juan",
+        "student_program": "BS-ED"
+    }
+]
