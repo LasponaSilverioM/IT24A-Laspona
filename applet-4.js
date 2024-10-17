@@ -50,5 +50,5 @@ class StudentList {
     }
 }
 
-const studentList = new StudentList('applet-5.json');
+const studentList = new StudentList('applet-4json');
 
