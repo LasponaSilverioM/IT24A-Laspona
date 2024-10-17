@@ -32,6 +32,6 @@ myMap.addMarker(8.360238, 124.867470, 'SC Building');
 myMap.addMarker(8.359554,124.869153, 'CCS Laboratories');
 myMap.addMarker(8.359134,124.868537, 'BA BUilding');
 
-myMap.loadMarkersFromJson('applet-2.json');
+myMap.loadMarkersFromJson('applet-1.json');
 
 
