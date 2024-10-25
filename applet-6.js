@@ -13,6 +13,13 @@ class TodoList {
             if (action) this[action + 'Task'](e);
         });
     }
+    addOrUpdateTask() {
+        const taskText = this.todoInput.value.trim();
+        if (taskText) {
+            this.editingIndex === -1 ? this.addTask(taskText) : this.updateTask(taskText);
+            this.todoInput.value = '';
+        }
+    }
 
     addTask(taskText) {
         const listItem = document.createElement('li');
@@ -72,4 +79,4 @@ class TimestampedTodoList extends TodoList {
     }
 }
 
-
+document.addEventListener('DOMContentLoaded', () => new TodoList());
